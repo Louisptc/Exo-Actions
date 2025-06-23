@@ -1,1 +1,52 @@
 # Le fichier YAML est à compléter
+
+name: Node.js CI
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout du code
+      - name: 1️⃣ Checkout repository
+        uses: actions/checkout@v4
+
+      # Step 2: Setup Node.js
+      - name: 2️⃣ Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      # Step 3: Installation des dépendances
+      - name: 3️⃣ Install dependencies
+        run: npm install
+
+      # Step 4: Vérification ESLint
+      - name: 4️⃣ Run ESLint
+        run: npm run lint
+
+      # Step 5: Tests
+      - name: 5️⃣ Run tests
+        run: npm run test
+
+      # Step 6: Build
+      - name: 6️⃣ Build project
+        run: |
+          mkdir -p dist
+          echo "Build" > dist/build.txt
+
+      # Step 7: Upload Artifact
+      - name: 7️⃣ Upload build.txt artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-txt
+          path: dist/build.txt
+
+      # Step 8: Message de succès
+      - name: 8️⃣ Success message
+        run: echo "✅ Pipeline completed successfully!"
