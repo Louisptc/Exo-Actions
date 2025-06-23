@@ -1,6 +1,6 @@
 # Atelier GitHub Actions : CI avec Node.js
 
-[![Node.js CI](https://github.com/$GITHUB_REPOSITORY/actions/workflows/ci.yml/badge.svg)](https://github.com/$GITHUB_REPOSITORY/actions/workflows/ci.yml)
+[![Node.js CI](https://github.com/Exo-Actions/actions/workflows/ci.yml/badge.svg)](https://github.com/Exo-Actions/actions/workflows/ci.yml)
 
 ## 🎯 Objectif
 Découvrir GitHub Actions à travers un projet Node.js simple. À chaque `push`, on souhaite :
@@ -26,3 +26,4 @@ Découvrir GitHub Actions à travers un projet Node.js simple. À chaque `push`,
 - Vérifiez votre YAML avec [YAML Lint](http://www.yamllint.com/)
 
 Bonne pratique ! 🚀
+
