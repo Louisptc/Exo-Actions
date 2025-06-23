@@ -1,6 +1,6 @@
 # Atelier GitHub Actions : CI avec Node.js
 
-[![Node.js CI](https://github.com/Exo-Actions/actions/workflows/ci.yml/badge.svg)](https://github.com/Exo-Actions/actions/workflows/ci.yml)
+![GitHub Actions Status](https://github.com/Exo-Actions/actions/workflows/ci.yml/badge.svg)
 
 ## 🎯 Objectif
 Découvrir GitHub Actions à travers un projet Node.js simple. À chaque `push`, on souhaite :
